@@ -3,8 +3,8 @@ import java.util.List;
 
 /**
  * The VehicleInventory program implements an application
- * that gets input from the user, stores it in an object,
- * then uses a separate class to properly print it.
+ * that creates two vehicles and calls separate classes
+ * properly print information and alter the speed.
  *
  * @author  Ina Tolo
  * @version 1.0
@@ -12,13 +12,10 @@ import java.util.List;
  */
 
 public class VehicleInventory {
-
     /**
      * Default constructor for the class.
      */
-    public VehicleInventory () {
-
-    }
+    public VehicleInventory() { }
 
     /**
      * Main entry into the program.
@@ -37,51 +34,42 @@ public class VehicleInventory {
         listOfVehicles.add(vehicleOne);
         listOfVehicles.add(vehicleTwo);
 
-        // performs commands for each vehicle
-        listOfVehicles.get(1).accelerate(30);
-        listOfVehicles.get(2).accelerate(65);
-        listOfVehicles.get(1).brake(26);
-        listOfVehicles.get(2).brake(26);
-        listOfVehicles.get(1).getSpeed();
-        listOfVehicles.get(2).getSpeed();
+        System.out.println("Adjustments for Vehicle One:");
+
+        // calls appropriate methods for first vehicle
+        listOfVehicles.get(0).getMaxSpeed();
+        listOfVehicles.get(0).accelerate(30);
+        listOfVehicles.get(0).accelerate(65);
+        listOfVehicles.get(0).getSpeed();
+        listOfVehicles.get(0).brake(25);
+        listOfVehicles.get(0).accelerate(15);
+        listOfVehicles.get(0).brake(1);
+        listOfVehicles.get(0).getSpeed();
+
+        System.out.println();
+        System.out.println("Vehicle #1 Information:");
+
+        // calls method in vehicle class to print info
+        listOfVehicles.get(0).getInfo();
+
+        System.out.println();
+        System.out.println("Adjustments for Vehicle Two:");
+
+        // calls appropriate methods for second vehicle
         listOfVehicles.get(1).getMaxSpeed();
-        listOfVehicles.get(2).getMaxSpeed();
+        listOfVehicles.get(1).brake(13);
+        listOfVehicles.get(1).accelerate(45);
+        listOfVehicles.get(1).brake(26);
+        listOfVehicles.get(1).getSpeed();
+        listOfVehicles.get(1).accelerate(22);
+        listOfVehicles.get(1).brake(4);
+        listOfVehicles.get(1).getSpeed();
+        listOfVehicles.get(1).accelerate(223);
+
+        System.out.println();
+        System.out.println("Vehicle #2:");
+
+        // calls method in vehicle class to print info
         listOfVehicles.get(1).getInfo();
-        listOfVehicles.get(2).getInfo();
     }
 }
-
-
-    //     // declaring variables
-    //     String userOption1String = "";
-    //     String userOption1Int = 0;
-    //     String userOption2Low = "";
-    //     String userOption2Up = "";
-
-    //     while (userOption1Int == 0) { 
-    //         // ask user what they would like to do
-    //         System.out.print("Which vehicle would you like to use (1 or 2)?: ");
-    //         userOption1String = sc.nextLine();
-
-    //         if (userOption1String != "1" || userOption1String != "2") {
-    //             // enter code for error message
-    //             continue;
-    //         }  else {
-    //             userOption1Int = Integer.parseInt(userOption1String);
-    //             break;
-    //         }
-    //     }
-        
-    //     // ask user what command they would like to perform
-    //     System.out.print("Which command would you like to perform (A: Accelerate, B: Brake, )?: ");
-    //     userOption2Low = sc.nextLine();
-        
-    //     userOption2Up = userOption2Low.toUpperCase();
-        
-    //     if 
-    // }
-
-    // for (int counter = 0; counter < listOfVehicles.size(); counter++) {
-    //     listOfVehicles.get(counter).print();
-    //     listofSubjectHistory.get(counter).print();
-    // }
