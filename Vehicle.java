@@ -68,7 +68,8 @@ public class Vehicle {
                 _speed = _maxSpeed;
             }
 
-            System.out.println("Vehicle has been accelerated: " + accelNum);
+            System.out.println("Vehicle has accelerated " + accelNum
+                + " km/h");
         }
     }
 
@@ -92,8 +93,8 @@ public class Vehicle {
                 _speed = 0;
             }
 
-            System.out.println("A brake of: "
-                + brakeNum + " has been applied.");
+            System.out.println("A brake of "
+                + brakeNum + " km/h has been applied.");
         }
     }
 
@@ -101,14 +102,14 @@ public class Vehicle {
      * Method that tells the user the current speed.
      */
     protected void getSpeed() {
-        System.out.println("Current speed: " + _speed);
+        System.out.println("Current speed: " + _speed + " km/h");
     }
 
     /**
      * Method that tells the user what the max speed of a vehicle is.
      */
     protected void getMaxSpeed() {
-        System.out.println("Max speed: " + _maxSpeed);
+        System.out.println("Max speed: " + _maxSpeed + " km/h");
     }
 
     /**
@@ -119,7 +120,7 @@ public class Vehicle {
         System.out.println("License plate: " + _plateNum);
         System.out.println("Colour: " + _colour);
         System.out.println("Number of doors: " + _doorNum);
-        System.out.println("Speed: " + _speed);
-        System.out.println("Max speed: " + _maxSpeed);
+        System.out.println("Speed: " + _speed + " km/h");
+        System.out.println("Max speed: " + _maxSpeed + " km/h");
     }
 }
